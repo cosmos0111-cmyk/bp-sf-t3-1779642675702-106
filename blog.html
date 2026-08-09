@@ -1,208 +1,206 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>마포 셔츠룸 블로그 – 힙플레이스의 거친 진실</title>
-    <meta name="description" content="마포 셔츠룸 블로그: 규격화된 카페는 가라. 진짜 힙은 여기 있다. 010-6279-0862로 전화 걸어.">
-    <meta name="keywords" content="마포 셔츠룸, 마포 셔츠룸 블로그, 마포 힙플레이스, 마포 카페, 마포 셔츠룸 전화번호">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-acid-yellow">
-    <link rel="canonical" href="https://sf-t3-1779642675702-106.maphoshirts.com/blog.html">
-    <meta property="og:title" content="마포 셔츠룸 블로그 – 힙플레이스의 거친 진실">
-    <meta property="og:description" content="마포 셔츠룸 블로그: 규격화된 카페는 가라. 진짜 힙은 여기 있다. 010-6279-0862로 전화 걸어.">
-    <meta property="og:url" content="https://sf-t3-1779642675702-106.maphoshirts.com/blog.html">
-    <style>
-        :root {
-            --brutal-black: #0a0a0a;
-            --brutal-yellow: #fcee0a;
-            --brutal-yellow-dark: #d4c809;
-            --brutal-white: #f5f5f5;
-            --brutal-gray: #333;
-            --font-mono: 'Courier New', monospace;
-            --font-sans: 'Impact', 'Arial Black', sans-serif;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            background: var(--brutal-black);
-            color: var(--brutal-white);
-            font-family: var(--font-mono);
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        a {
-            color: var(--brutal-yellow);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        a:hover {
-            color: var(--brutal-white);
-        }
-        /* 네비게이션 */
-        nav {
-            background: var(--brutal-black);
-            border-bottom: 3px solid var(--brutal-yellow);
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            z-index: 100;
-        }
-        .logo {
-            font-family: var(--font-sans);
-            font-size: 1.8rem;
-            letter-spacing: -1px;
-            color: var(--brutal-yellow);
-            text-transform: uppercase;
-        }
-        .logo span {
-            color: var(--brutal-white);
-        }
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-        .nav-links li a {
-            font-family: var(--font-sans);
-            font-size: 1rem;
-            text-transform: uppercase;
-            padding: 0.5rem 0;
-            border-bottom: 2px solid transparent;
-        }
-        .nav-links li a.active {
-            border-bottom-color: var(--brutal-yellow);
-            color: var(--brutal-yellow);
-        }
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 4px;
-            background: none;
-            border: none;
-            padding: 4px;
-        }
-        .hamburger span {
-            display: block;
-            width: 28px;
-            height: 3px;
-            background: var(--brutal-yellow);
-            transition: all 0.3s;
-        }
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: var(--brutal-black);
-                border-bottom: 3px solid var(--brutal-yellow);
-                padding: 1rem 2rem;
-                gap: 1rem;
-            }
-            .nav-links.show {
-                display: flex;
-            }
-            .hamburger {
-                display: flex;
-            }
-            .logo {
-                font-size: 1.4rem;
-            }
-        }
-        /* 메인 콘텐츠 */
-        main {
-            flex: 1;
-            padding: 2rem;
-            max-width: 900px;
-            margin: 0 auto;
-            width: 100%;
-        }
-        .blog-post {
-            background: #111;
-            border: 2px solid var(--brutal-yellow);
-            padding: 2rem;
-            margin-top: 2rem;
-        }
-        .blog-post h1 {
-            font-family: var(--font-sans);
-            font-size: 2.5rem;
-            color: var(--brutal-yellow);
-            text-transform: uppercase;
-            line-height: 1.1;
-            margin-bottom: 0.5rem;
-        }
-        .post-meta {
-            font-size: 0.85rem;
-            color: #888;
-            margin-bottom: 1.5rem;
-            border-bottom: 1px dashed var(--brutal-gray);
-            padding-bottom: 1rem;
-        }
-        .post-content p {
-            margin-bottom: 1.2rem;
-            font-size: 1.05rem;
-        }
-        .post-content blockquote {
-            border-left: 4px solid var(--brutal-yellow);
-            padding: 0.8rem 1.5rem;
-            margin: 1.5rem 0;
-            background: #1a1a1a;
-            font-style: italic;
-            color: #ccc;
-        }
-        .post-content blockquote strong {
-            color: var(--brutal-yellow);
-        }
-        .cta-block {
-            background: var(--brutal-yellow);
-            color: var(--brutal-black);
-            padding: 1.5rem;
-            margin: 2rem 0;
-            text-align: center;
-            font-family: var(--font-sans);
-            font-size: 1.3rem;
-            text-transform: uppercase;
-        }
-        .cta-block a {
-            color: var(--brutal-black);
-            border-bottom: 2px solid var(--brutal-black);
-        }
-        .cta-block a:hover {
-            color: var(--brutal-gray);
-        }
-        /* 푸터 */
-        footer {
-            border-top: 3px solid var(--brutal-yellow);
-            padding: 1.5rem 2rem;
-            text-align: center;
-            font-size: 0.85rem;
-            color: #888;
-        }
-        footer a {
-            color: var(--brutal-yellow);
-        }
-        footer .phone {
-            font-family: var(--font-sans);
-            font-size: 1.2rem;
-            color: var(--brutal-yellow);
-            display: block;
-            margin-top: 0.5rem;
-        }
-        /* 햄버거 메뉴 토글 스크립트 */
-        /* 인라인으로 간단히 처리 (순수 HTML 요청이므로 스크립트는 최소화) */
-    </style>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>마포 셔츠룸 블로그 – 힙플레이스의 거친 진실</title>
+ <meta name="description" content="마포 셔츠룸 블로그: 규격화된 카페는 가라. 진짜 힙은 여기 있다.">
+ <meta name="keywords" content="마포 셔츠룸, 마포 셔츠룸 블로그, 마포 힙플레이스, 마포 카페, 마포 셔츠룸 전화번호">
+ <link rel="canonical" href="https://sf-t3-1779642675702-106.maphoshirts.com/blog.html">
+ <meta property="og:title" content="마포 셔츠룸 블로그 – 힙플레이스의 거친 진실">
+ <meta property="og:description" content="마포 셔츠룸 블로그: 규격화된 카페는 가라. 진짜 힙은 여기 있다.">
+ <meta property="og:url" content="https://sf-t3-1779642675702-106.maphoshirts.com/blog.html">
+ <style>
+ :root {
+ --brutal-black: #0a0a0a;
+ --brutal-yellow: #fcee0a;
+ --brutal-yellow-dark: #d4c809;
+ --brutal-white: #f5f5f5;
+ --brutal-gray: #333;
+ --font-mono: 'Courier New', monospace;
+ --font-sans: 'Impact', 'Arial Black', sans-serif;
+ }
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ body {
+ background: var(--brutal-black);
+ color: var(--brutal-white);
+ font-family: var(--font-mono);
+ line-height: 1.6;
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+ }
+ a {
+ color: var(--brutal-yellow);
+ text-decoration: none;
+ transition: color 0.2s;
+ }
+ a:hover {
+ color: var(--brutal-white);
+ }
+ /* 네비게이션 */
+ nav {
+ background: var(--brutal-black);
+ border-bottom: 3px solid var(--brutal-yellow);
+ padding: 1rem 2rem;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ position: relative;
+ z-index: 100;
+ }
+ .logo {
+ font-family: var(--font-sans);
+ font-size: 1.8rem;
+ letter-spacing: -1px;
+ color: var(--brutal-yellow);
+ text-transform: uppercase;
+ }
+ .logo span {
+ color: var(--brutal-white);
+ }
+ .nav-links {
+ display: flex;
+ gap: 2rem;
+ list-style: none;
+ }
+ .nav-links li a {
+ font-family: var(--font-sans);
+ font-size: 1rem;
+ text-transform: uppercase;
+ padding: 0.5rem 0;
+ border-bottom: 2px solid transparent;
+ }
+ .nav-links li a.active {
+ border-bottom-color: var(--brutal-yellow);
+ color: var(--brutal-yellow);
+ }
+ .hamburger {
+ display: none;
+ flex-direction: column;
+ cursor: pointer;
+ gap: 4px;
+ background: none;
+ border: none;
+ padding: 4px;
+ }
+ .hamburger span {
+ display: block;
+ width: 28px;
+ height: 3px;
+ background: var(--brutal-yellow);
+ transition: all 0.3s;
+ }
+ @media (max-width: 768px) {
+ .nav-links {
+ display: none;
+ flex-direction: column;
+ position: absolute;
+ top: 100%;
+ left: 0;
+ right: 0;
+ background: var(--brutal-black);
+ border-bottom: 3px solid var(--brutal-yellow);
+ padding: 1rem 2rem;
+ gap: 1rem;
+ }
+ .nav-links.show {
+ display: flex;
+ }
+ .hamburger {
+ display: flex;
+ }
+ .logo {
+ font-size: 1.4rem;
+ }
+ }
+ /* 메인 콘텐츠 */
+ main {
+ flex: 1;
+ padding: 2rem;
+ max-width: 900px;
+ margin: 0 auto;
+ width: 100%;
+ }
+ .blog-post {
+ background: #111;
+ border: 2px solid var(--brutal-yellow);
+ padding: 2rem;
+ margin-top: 2rem;
+ }
+ .blog-post h1 {
+ font-family: var(--font-sans);
+ font-size: 2.5rem;
+ color: var(--brutal-yellow);
+ text-transform: uppercase;
+ line-height: 1.1;
+ margin-bottom: 0.5rem;
+ }
+ .post-meta {
+ font-size: 0.85rem;
+ color: #888;
+ margin-bottom: 1.5rem;
+ border-bottom: 1px dashed var(--brutal-gray);
+ padding-bottom: 1rem;
+ }
+ .post-content p {
+ margin-bottom: 1.2rem;
+ font-size: 1.05rem;
+ }
+ .post-content blockquote {
+ border-left: 4px solid var(--brutal-yellow);
+ padding: 0.8rem 1.5rem;
+ margin: 1.5rem 0;
+ background: #1a1a1a;
+ font-style: italic;
+ color: #ccc;
+ }
+ .post-content blockquote strong {
+ color: var(--brutal-yellow);
+ }
+ .cta-block {
+ background: var(--brutal-yellow);
+ color: var(--brutal-black);
+ padding: 1.5rem;
+ margin: 2rem 0;
+ text-align: center;
+ font-family: var(--font-sans);
+ font-size: 1.3rem;
+ text-transform: uppercase;
+ }
+ .cta-block a {
+ color: var(--brutal-black);
+ border-bottom: 2px solid var(--brutal-black);
+ }
+ .cta-block a:hover {
+ color: var(--brutal-gray);
+ }
+ /* 푸터 */
+ footer {
+ border-top: 3px solid var(--brutal-yellow);
+ padding: 1.5rem 2rem;
+ text-align: center;
+ font-size: 0.85rem;
+ color: #888;
+ }
+ footer a {
+ color: var(--brutal-yellow);
+ }
+ footer .phone {
+ font-family: var(--font-sans);
+ font-size: 1.2rem;
+ color: var(--brutal-yellow);
+ display: block;
+ margin-top: 0.5rem;
+ }
+ /* 햄버거 메뉴 토글 스크립트 */
+ /* 인라인으로 간단히 처리 (순수 HTML 요청이므로 스크립트는 최소화) */
+ </style>
+ <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
 </head>
@@ -235,7 +233,7 @@
 <p><strong>Q. 예약 없이 방문해도 되나?</strong><br>A. 가능한 경우도 있지만 대기가 있을 수 있어 사전 연락을 권장한다.</p>
 </div>
 <div class="cta-block">
-<p>문의 전화: <a class="phone" href="tel:01062790862">01062790862</a></p>
+<p>문의 전화: </p>
 </div>
 </article>
 </main>
